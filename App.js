@@ -35,7 +35,7 @@ class UI {
         if(element.name === 'delete'){
             element.parentElement.parentElement.parentElement.remove();
             // Show the message
-            this.showMessage('Product deleted successfully', 'danger');
+            this.showMessage('Product deleted successfully', 'info');
         }   
     }
 
@@ -64,17 +64,24 @@ document.getElementById('product-form')
         // Create a Instance of Product class
         const product = new Product(name, price, year);
 
+        
         // Create a Instance of UI class 
         const ui = new UI();
-
-        // add "product instance" to ui
-        ui.addProduct(product);
-
-        // reset the form
-        ui.resetForm();
         
-        // Show the message
-        ui.showMessage('Product added successfully', 'success');
+        // Form validation
+        if(name === '' || price === '' || year === ''){
+            ui.showMessage('Complete Fields Please!', 'danger');
+        } else {
+            // add "product instance" to ui
+            ui.addProduct(product);
+    
+            // reset the form
+            ui.resetForm();
+
+            // Show the message
+            ui.showMessage('Product added successfully', 'success');
+        }
+
 
         e.preventDefault();
     });
