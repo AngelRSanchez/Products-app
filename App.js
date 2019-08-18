@@ -64,13 +64,12 @@ document.getElementById('product-form')
         // Create a Instance of Product class
         const product = new Product(name, price, year);
 
-        
         // Create a Instance of UI class 
         const ui = new UI();
         
         // Form validation
         if(name === '' || price === '' || year === ''){
-            ui.showMessage('Complete Fields Please!', 'danger');
+             return ui.showMessage('Complete Fields Please!', 'danger');
         } else {
             // add "product instance" to ui
             ui.addProduct(product);
@@ -81,8 +80,6 @@ document.getElementById('product-form')
             // Show the message
             ui.showMessage('Product added successfully', 'success');
         }
-
-
         e.preventDefault();
     });
 
@@ -92,7 +89,4 @@ document.getElementById('product-list')
 
         // Capturing event
         ui.deleteProduct(e.target);
-
-        
-
     });
