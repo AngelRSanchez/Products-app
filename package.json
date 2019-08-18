@@ -1,0 +1,24 @@
+{
+  "name": "app-jspoo",
+  "version": "1.0.0",
+  "description": "Products Application with JavaScript POO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/AngelRSanchez/Products-app"
+  },
+  "keywords": [
+    "Products",
+    "app",
+    "javascript",
+    "js",
+    "poo",
+    "git",
+    "github"
+  ],
+  "author": "github.com/AngelRSanchez",
+  "license": "ISC"
+}
