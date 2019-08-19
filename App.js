@@ -70,16 +70,17 @@ document.getElementById('product-form')
         // Form validation
         if(name === '' || price === '' || year === ''){
              return ui.showMessage('Complete Fields Please!', 'danger');
-        } else {
-            // add "product instance" to ui
-            ui.addProduct(product);
-    
-            // reset the form
-            ui.resetForm();
-
-            // Show the message
-            ui.showMessage('Product added successfully', 'success');
         }
+         
+        // add "product instance" to ui
+        ui.addProduct(product);
+
+        // reset the form
+        ui.resetForm();
+
+        // Show the message
+        ui.showMessage('Product added successfully', 'success');
+        
         e.preventDefault();
     });
 
